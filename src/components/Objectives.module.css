@@ -1,0 +1,157 @@
+.section {
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(10, 6, 50, 0.5) 0%, transparent 60%),
+    repeating-linear-gradient(
+      60deg,
+      transparent,
+      transparent 80px,
+      rgba(212, 175, 55, 0.015) 80px,
+      rgba(212, 175, 55, 0.015) 81px
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      transparent,
+      transparent 80px,
+      rgba(212, 175, 55, 0.015) 80px,
+      rgba(212, 175, 55, 0.015) 81px
+    );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.labelRow {
+  margin-bottom: 1rem;
+}
+
+.labelText {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  opacity: 0.7;
+}
+
+.heading {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(240,236,224,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subheading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-style: italic;
+  color: rgba(240, 236, 224, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  margin-top: 4rem;
+}
+
+.card {
+  position: relative;
+  padding: 2.8rem 2rem;
+  background: rgba(12, 10, 40, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  text-align: left;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  cursor: default;
+}
+
+.card:hover {
+  background: rgba(18, 14, 60, 0.7);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.card:hover .cardNumber {
+  opacity: 0.15;
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.cardNumber {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #D4AF37;
+  opacity: 0.08;
+  line-height: 1;
+  margin-bottom: -0.5rem;
+  transition: opacity 0.4s ease;
+  user-select: none;
+}
+
+.cardInner {
+  position: relative;
+  z-index: 1;
+}
+
+.cardTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: #D4AF37;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.cardText {
+  font-family: 'Crimson Pro', serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height: 1.8;
+  color: rgba(240, 236, 224, 0.7);
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card { text-align: center; }
+  .cardNumber { text-align: left; }
+}

@@ -1,0 +1,110 @@
+.section {
+  padding: 8rem 2rem;
+  position: relative;
+  background: linear-gradient(180deg, transparent 0%, rgba(12, 8, 45, 0.4) 50%, transparent 100%);
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(20, 14, 70, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 1.4rem;
+  color: #D4AF37;
+  opacity: 0.6;
+}
+
+.labelText {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.7);
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.03em;
+}
+
+.quoteBlock {
+  background: rgba(212, 175, 55, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 2px;
+  padding: 3rem 3.5rem;
+  text-align: left;
+  position: relative;
+}
+
+.quoteMark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: rgba(212, 175, 55, 0.25);
+  line-height: 0.5;
+  height: 2.5rem;
+  user-select: none;
+}
+
+.quoteText {
+  font-family: 'Crimson Pro', serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  line-height: 1.9;
+  color: rgba(240, 236, 224, 0.85);
+  margin: 1.2rem 0;
+  font-weight: 300;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.pill {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.45rem 1.1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.pill:hover {
+  background: rgba(212, 175, 55, 0.08);
+  color: #D4AF37;
+}
+
+@media (max-width: 600px) {
+  .quoteBlock {
+    padding: 2rem 1.5rem;
+  }
+}

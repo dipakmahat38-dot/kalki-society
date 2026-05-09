@@ -1,0 +1,91 @@
+.footer {
+  position: relative;
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 4, 20, 0.8) 100%);
+}
+
+.cosmicLine {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2) 20%, rgba(212, 175, 55, 0.4) 50%, rgba(212, 175, 55, 0.2) 80%, transparent);
+  margin-bottom: 5rem;
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.miniEmblem {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+}
+
+.footerMantra {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-style: italic;
+  font-weight: 600;
+  color: #D4AF37;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+}
+
+.goldLine {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 0 auto 1.5rem;
+}
+
+.footerTagline {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: rgba(240, 236, 224, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.footerSub {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(240, 236, 224, 0.45);
+  margin-bottom: 2rem;
+}
+
+.mottoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.mottoDash {
+  flex: 1;
+  height: 1px;
+  max-width: 60px;
+  background: rgba(212, 175, 55, 0.35);
+}
+
+.mottoFooter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.7);
+  letter-spacing: 0.08em;
+}
+
+.copyright {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: rgba(240, 236, 224, 0.25);
+  margin-top: 1.5rem;
+}

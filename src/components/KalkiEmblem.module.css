@@ -1,0 +1,36 @@
+.emblemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emblem {
+  width: 180px;
+  height: 180px;
+  animation: rotateSlow 60s linear infinite;
+  filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.5)) drop-shadow(0 0 40px rgba(212, 175, 55, 0.2));
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Center text does NOT rotate — handled via counter-rotate on inner group */
+.emblem text {
+  animation: counterRotate 60s linear infinite;
+  transform-origin: 100px 100px;
+}
+
+@keyframes counterRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@media (max-width: 768px) {
+  .emblem {
+    width: 140px;
+    height: 140px;
+  }
+}
